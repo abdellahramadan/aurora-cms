@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row align-items-center justify-content-between">
+        <div class="col-md-7 col-lg-6">
+            <div class="hero-content-wrap text-white">
+                <h1 class="text-white">Managed Your Cloud Hosting by Experts</h1>
+                <p class="lead">Web hosting made choose a fine-tuned hosting services solution for successful personal and business websites.</p>
+                <a href="#" class="btn btn-brand-03 btn-lg">Get Start Now</a>
+            </div>
+        </div>
+        <div class="col-md-5 col-lg-6">
+            <div class="img-wrap">
+                <img src="{{ asset('build/img/hero-cloud-hosting.svg') }}" alt="vps image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    {{ content.text_area|raw }}
+    {{ content.article|raw }}
+</div>
+{% endblock %}

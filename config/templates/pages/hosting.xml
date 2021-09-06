@@ -1,39 +1,19 @@
 <?xml version="1.0" ?>
 <template xmlns="http://schemas.sulu.io/template/template"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xmlns:xi="http://www.w3.org/2001/XInclude"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
-    <key>homepage</key>
+    <key>hosting</key>
 
-    <view>pages/homepage</view>
+    <view>pages/hosting</view>
     <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
     <cacheLifetime>86400</cacheLifetime>
 
     <meta>
-        <title lang="en">Homepage</title>
-        <title lang="de">Startseite</title>
+        <title lang="en">Hosting</title>
     </meta>
 
     <properties>
-        <property name="tagLine" type="text_line">
-            <meta>
-                <title lang="en">TagLine</title>
-            </meta>
-        </property>
-
-        <property name="subTag" type="text_line">
-            <meta>
-                <title lang="en">Sub TagLine</title>
-            </meta>
-        </property>
-
-        <property name="tagUrl" type="url">
-            <meta>
-                <title lang="en">Tag Url</title>
-            </meta>
-        </property>
-
         <property name="title" type="text_line" mandatory="true">
             <meta>
                 <title lang="en">Title</title>
@@ -43,6 +23,12 @@
             </params>
 
             <tag name="sulu.rlp.part"/>
+        </property>
+        
+        <property name="text_area" type="text_area">
+            <meta>
+                <title lang="en">Text Area</title>
+            </meta>
         </property>
 
         <property name="url" type="resource_locator" mandatory="true">
@@ -56,12 +42,6 @@
         <property name="article" type="text_editor">
             <meta>
                 <title lang="en">Article</title>
-            </meta>
-        </property>
-
-        <property name="applications" type="media_selection">
-            <meta>
-                <title lang="en">Applications Images</title>
             </meta>
         </property>
     </properties>

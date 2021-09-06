@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<properties xmlns="http://schemas.sulu.io/template/template"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <property name="startDate" type="date" mandatory="true">
+        <!-- ... -->
+    </property>
+
+    <!-- ... -->
+</properties>
