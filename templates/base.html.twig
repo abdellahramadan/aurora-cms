@@ -21,6 +21,8 @@
 <body>
     <header>
         {% block header %}
+        {% include('./fragments/top-header.html.twig') %}
+        {#
             <nav>
                 <ul>
                     <li>
@@ -35,21 +37,23 @@
                     {% endfor %}
                 </ul>
             </nav>
+            #}
         {% endblock %}
     </header>
 
+{#
     <form action="{{ path('sulu_search.website_search') }}" method="GET">
         <input name="q" type="text" placeholder="Search"/>
         <input type="submit" value="Go"/>
     </form>
-
-    <main>
+#}
+    <div class="main">
         {% block content %}{% endblock %}
-    </main>
+    </div>
 
     <footer>
         {% block footer %}
-            <p>Copyright {{ 'now'|date('Y') }} SULU</p>
+            {% include('./fragments/footer.html.twig') %}
         {% endblock %}
     </footer>
 

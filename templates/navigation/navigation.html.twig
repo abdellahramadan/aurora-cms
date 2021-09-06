@@ -1,0 +1,35 @@
+<!--main menu start-->
+<div id="navBar" class="collapse navbar-collapse">
+    <ul class="navbar-nav ml-auto main-navbar-nav">
+    
+        {% for item in sulu_navigation_root_tree('main', 2) %}
+        
+            <li class="nav-item hs-has-sub-menu custom-nav-item">
+
+                <a href="{{ sulu_content_path(item.url) }}" id="pagesMegaMenu" class="nav-link custom-nav-link main-link-toggle" aria-haspopup="true" aria-expanded="false" aria-labelledby="pagesSubMenu" title="{{ item.title }}">{{ item.title }}</a>
+                {% if item.children|length > 0 %}
+                    <ul id="pagesSubMenu" class="hs-sub-menu main-sub-menu" aria-labelledby="pagesMegaMenu" style="min-width: 230px;">
+                        {% for child in item.children %}
+                            <li class="nav-item submenu-item">
+                            
+                                <a href="{{ sulu_content_path(child.url) }}" class="nav-link sub-menu-nav-link" title="{{ child.title }}">{{ child.title }}</a>
+                            </li>
+                            {% if child.children|length > 0 %}
+                                <li class="hs-has-sub-menu">
+                                 <a id="navLinkPagesPricing" class="nav-link sub-menu-nav-link sub-link-toggle" href="javascript:void(0);" aria-haspopup="true" aria-expanded="false" aria-controls="navSubmenuPagesPricing">{{ child.title }}</a>
+                                    <ul id="navSubmenuPagesPricing" class="hs-sub-menu main-sub-menu" aria-labelledby="navLinkPagesPricing" style="min-width: 230px;">
+                                        {% for grandChild in child.children %}
+                                            <li><a class="nav-link sub-menu-nav-link" href="{{ sulu_content_path(grandChild.url) }}" title="{{ grandChild.title }}">{{ grandChild.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endif %}
+                            
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
