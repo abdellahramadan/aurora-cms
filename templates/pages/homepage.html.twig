@@ -112,6 +112,38 @@
 </section>
 <!--application hosting promo end-->
 
+{% include('fragments/support.html.twig') %}
+
+<!--services section start-->
+<section class="ptb-100 service-section-wrap">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-7">
+                <div class="section-heading text-center">
+                    <h2>{{ content.hostingTitle }}</h2>
+                    <p>{{ content.hostingSubTitle }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for block in content.blocks %}
+                <div class="col-md-6 col-lg-6">
+                    <div class="single-service p-5 rounded border gray-light-bg">
+                        <div class="service-header d-flex align-items-center justify-content-between">
+                            <h4><span class="h5 text-uppercase">{{ block.subTitle }}</span> <br>{{ block.title }}</h4>
+                            <span class="fas fa-shield-alt fa-3x color-primary"></span>
+                        </div>
+                        <p>{{ block.description|raw }} </p>
+                        <a href="/{{ block.link ?? '#' }}" class="btn btn-outline-brand-02 mt-3">Voir</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--services section end-->
+
     {#<h1>{{ content.title }}</h1>#}
     {#<h1>{{ content.slider }}</h1>#}
 
