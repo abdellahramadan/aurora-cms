@@ -64,5 +64,62 @@
                 <title lang="en">Applications Images</title>
             </meta>
         </property>
+
+        <property name="hostingTitle" type="text_line">
+            <meta>
+                <title lang="en">Hoting Features Title</title>
+            </meta>
+        </property>
+
+        <property name="hostingSubTitle" type="text_line">
+            <meta>
+                <title lang="en">Hoting Features Sub Title</title>
+            </meta>
+        </property>
+
+        
+        <block name="blocks" default-type="text" minOccurs="0">
+            <meta>
+                <title lang="en">Hosting Packages</title>
+            </meta>
+            <types>
+                <type name="text">
+                    <meta>
+                        <title lang="en">Text</title>
+                    </meta>
+                    <properties>
+                        <property name="icon" type="text_line">
+                            <meta>
+                                <title lang="en">Font Icon</title>
+                            </meta>
+                        </property>
+                        <property name="title" type="text_line">
+                            <meta>
+                                <title lang="en">Package Name</title>
+                            </meta>
+                        </property>
+                         <property name="subTitle" type="text_line">
+                            <meta>
+                                <title lang="en">Sub Title</title>
+                            </meta>
+                        </property>
+                        <property name="description" type="text_editor">
+                            <meta>
+                                <title lang="en">Description</title>
+                            </meta>
+                        </property>
+                        <property name="link" type="text_line">
+                            <meta>
+                                <title lang="en">URL</title>
+                            </meta>
+                        </property>
+                    </properties>
+                </type>
+            </types>
+        </block>
+            
     </properties>
+
+    <xi:include href="fragments/support.xml"/>
+    
 </template>
